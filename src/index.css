@@ -24,9 +24,8 @@
   --transition: all 400ms ease;
 }
 
-
-
 body {
+  background-color: var(--color-bg);
   background: var(--color-bg) url("..\src\images\bg-texture.png");
 
   font-family: "Poppins", sans-serif;
@@ -142,7 +141,7 @@ nav a {
   color: var(--color-light);
   color: red;
   padding: 0.2rem 0.4rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 50%;
 
   display: flex;
@@ -156,7 +155,6 @@ nav a {
   .container {
     width: var(--container-width-md);
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -164,6 +162,3 @@ nav a {
     width: var(--container-width-sm);
   }
 }
-
-
-
