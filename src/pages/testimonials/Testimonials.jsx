@@ -4,7 +4,7 @@ import PHOTO from "../../images/avatar4.jpg";
 
 const Testimonials = () => {
   return (
-    <section className="#testimonials">
+    <section id="testimonials">
       <h5>Review From Clients</h5>
       <h2>Testimonials</h2>
 

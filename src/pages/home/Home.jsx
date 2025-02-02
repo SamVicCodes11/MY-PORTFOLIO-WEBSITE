@@ -10,7 +10,7 @@ const Home = () => {
       <div className="container header_container">
         <h4>Hello, I'm</h4>
         <h1>Akpobasa Victor</h1>
-        <h4 className="text_light">Fullstack Developer</h4>
+        <h4 className="text_light">Frontend Engineer</h4>
 
         <CTA />
         <Socials />

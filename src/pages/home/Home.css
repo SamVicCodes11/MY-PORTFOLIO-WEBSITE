@@ -29,6 +29,7 @@ header {
   font-size: 1.3rem;
 }
 
+
 .socials::after {
   content: "";
   width: 4px;
@@ -84,6 +85,8 @@ header {
   h1 {
     font-size: 2rem;
   }
+
+
 
   .me {
     width: 20rem;

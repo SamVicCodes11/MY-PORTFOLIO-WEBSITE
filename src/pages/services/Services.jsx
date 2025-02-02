@@ -3,7 +3,7 @@ import "./Services.css";
 
 const Services = () => {
   return (
-    <section className="#services">
+    <section id="services">
       <h5>What I Offer</h5>
       <h2>Services</h2>
 
@@ -18,26 +18,22 @@ const Services = () => {
           <ul className="service_list">
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Building responsive and visually appealing user interfaces.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Optimizing web applications for speed and performance.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Ensuring seamless cross-browser and mobile compatibility.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Implementing smooth animations and interactive elements.</p>
             </li>
           </ul>
         </article>
@@ -52,38 +48,32 @@ const Services = () => {
           <ul className="service_list">
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Developing scalable, end-to-end web applications.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Integrating frontend and backend for seamless data flow.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Building robust APIs for secure data exchange.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Ensuring high performance and security across applications.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Managing databases and server-side logic efficiently.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Deploying and maintaining web applications in the cloud.</p>
             </li>
           </ul>
         </article>
@@ -98,31 +88,25 @@ const Services = () => {
           <ul className="service_list">
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Designing and implementing scalable backend architectures.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Developing and securing RESTful APIs and databases.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Ensuring data integrity and authentication mechanisms.</p>
             </li>
 
             <li>
               <IoShieldCheckmarkSharp className="service_list_icon" />
-
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p>Optimizing server performance and database queries.</p>
             </li>
           </ul>
         </article>
-
-        {/*  */}
       </div>
     </section>
   );

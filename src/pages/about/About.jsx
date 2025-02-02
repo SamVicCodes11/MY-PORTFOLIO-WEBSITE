@@ -8,13 +8,13 @@ import { HiUsers } from "react-icons/hi";
 
 const About = () => {
   return (
-    <section className="#about">
+    <section id="about">
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 
       <div className="container about_container">
         <div className="about_me_img">
-          <img src={ME} alt="" />
+          <img src={ME} alt="Akpobasa Victor Samuel" />
         </div>
 
         <div>
@@ -23,36 +23,30 @@ const About = () => {
               <FaAward className="about_icon" />
 
               <h4>Experience</h4>
-
-              <small className="text_light">3+ Years Working</small>
+              <small className="text_light">3+ Years in Software Development</small>
             </article>
 
             <article>
               <HiUsers className="about_icon" />
 
               <h4>Clients</h4>
-
-              <small className="text_light">300+ Worldwide </small>
+              <small className="text_light">Worked with 300+ Clients Worldwide</small>
             </article>
 
             <article>
               <IoLibrary className="about_icon" />
 
               <h4>Projects</h4>
-
-              <small className="text_light">30+ Completed</small>
+              <small className="text_light">Completed 30+ Projects</small>
             </article>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            pariatur inventore quidem repudiandae dolorem sint blanditiis
-            corporis doloribus voluptatum officia quod hic cumque dolor alias
-            provident, et possimus aut ad!
+          I’m a Front-End Engineer dedicated to crafting intuitive, high-performance user interfaces. I focus on building seamless, responsive, and accessible web experiences that enhance usability and engagement. With a keen eye for detail and a problem-solving mindset, I turn ideas into polished, interactive digital solutions.
           </p>
 
           <a href="#contact" className="btn btn_primary">
-            Let's Talk
+            Let's Connect
           </a>
         </div>
       </div>
