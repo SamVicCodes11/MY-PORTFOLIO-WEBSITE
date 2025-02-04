@@ -60,7 +60,7 @@ const Experience = () => {
 
     {
       icon: <FaCheck />,
-      skill: "Redux",
+      skill: "Context API",
       experience: "Experienced",
     },
   ];

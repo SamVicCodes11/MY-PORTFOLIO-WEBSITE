@@ -1,5 +1,5 @@
 import "./Testimonials.css";
-import PHOTO from "../../images/avatar4.jpg";
+import PHOTO from "../../images/avatar3.jpg";
 
 
 const Testimonials = () => {
@@ -14,11 +14,10 @@ const Testimonials = () => {
           <img src={PHOTO} alt="" />
         </div>
 
-        <h4>SamVic Codes</h4>
+        <h4>Daniel Evans</h4>
 
         <small className="clent_review">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
-          quis laborum eius dolores excepturi sed minima! Esse, eaque vel!
+        Victor is a fantastic developer! He built our website with great attention to detail, and the user experience is top-notch. Highly recommend working with him!
         </small>
         </article>
       </div>

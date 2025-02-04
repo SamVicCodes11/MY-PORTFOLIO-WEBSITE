@@ -34,6 +34,7 @@
 .portfolio_image {
   border-radius: 1.6rem;
   overflow: hidden;
+  height: 8rem;
 }
 
 .portfolio_container h3 {

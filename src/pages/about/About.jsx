@@ -23,21 +23,21 @@ const About = () => {
               <FaAward className="about_icon" />
 
               <h4>Experience</h4>
-              <small className="text_light">3+ Years in Software Development</small>
+              <small className="text_light">2+ Years Working</small>
             </article>
 
             <article>
               <HiUsers className="about_icon" />
 
               <h4>Clients</h4>
-              <small className="text_light">Worked with 300+ Clients Worldwide</small>
+              <small className="text_light"> 20+ Worldwide</small>
             </article>
 
             <article>
               <IoLibrary className="about_icon" />
 
               <h4>Projects</h4>
-              <small className="text_light">Completed 30+ Projects</small>
+              <small className="text_light"> 30+ Completed</small>
             </article>
           </div>
 
