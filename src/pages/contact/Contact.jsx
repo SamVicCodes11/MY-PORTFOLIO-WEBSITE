@@ -20,7 +20,7 @@ const Contact = () => {
       alert("Message sent successfully! ✅");
       form.current.reset();
     } catch (error) {
-      alert("Failed to send message. ❌");
+      alert("Network error, Please try again. ❌");
       console.error(error);
     }
   };
