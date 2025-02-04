@@ -32,7 +32,7 @@
 }
 
 .portfolio_image {
-  border-radius: 1.6rem;
+  /* border-radius: 1.6rem; */
   overflow: hidden;
   height: 8rem;
 }
