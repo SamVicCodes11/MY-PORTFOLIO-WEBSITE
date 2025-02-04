@@ -12,6 +12,17 @@
   --transition: all 400ms ease;
 }
 
+.message_status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.message_status.error {
+  color: red;
+}
+
+
 .contact_container {
   width: 62%;
   margin-inline: auto;

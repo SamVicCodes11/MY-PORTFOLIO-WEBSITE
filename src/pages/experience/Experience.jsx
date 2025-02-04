@@ -99,11 +99,6 @@ const Experience = () => {
     },
     {
       icon: <FaCheck />,
-      skill: "Node.js",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
       skill: "Python",
       experience: "Basic",
     },
