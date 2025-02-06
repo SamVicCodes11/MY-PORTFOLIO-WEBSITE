@@ -1,4 +1,5 @@
-import CV from "../images/cv.pdf";
+import CV from "../cv/resume.pdf";
+
 const CTA = () => {
   return (
     <div className="cta_button">
