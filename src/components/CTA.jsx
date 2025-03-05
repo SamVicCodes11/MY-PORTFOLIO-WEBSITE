@@ -1,13 +1,13 @@
-import CV from "../cv/resume.pdf";
 
 const CTA = () => {
   return (
     <div className="cta_button">
-      <a href={CV} download className="btn">
-        Download CV
-      </a>
-      <a href="#contact" className="btn btn_primary">
+      <a href="#contact" className="btn">
         Let's Talk
+      </a>
+
+      <a href="#portfolio" className="btn btn_primary">
+        My Work
       </a>
     </div>
   );

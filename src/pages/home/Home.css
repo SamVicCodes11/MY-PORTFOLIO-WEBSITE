@@ -29,12 +29,15 @@ header {
   font-size: 1.3rem;
 }
 
-
 .socials::after {
   content: "";
   width: 4px;
   height: 4rem;
   background-color: var(--color-primary);
+}
+
+.socials a:hover {
+  transform: translateX(-0.5rem);
 }
 
 .slider {
@@ -66,8 +69,8 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-  height: 68vh;
- }
+    height: 68vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -78,7 +81,7 @@ header {
 
   header {
     height: 100vh;
-   }
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -86,10 +89,11 @@ header {
     font-size: 2rem;
   }
 
-
-
   .me {
     width: 20rem;
     left: calc(50% - 10rem);
+    /* max-width: 80%; */
+    /* margin-inline: auto; */
+    /* max-height: 100vh; */
   }
 }

@@ -3,10 +3,21 @@ import CTA from "../../components/CTA";
 import Socials from "../../components/Socials";
 import ME from "../../images/MY_PICC.png";
 import "./Home.css";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <header>
+    <motion.header
+      initial="hidden"
+      whileInView="visible"
+      animate="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
       <div className="container header_container">
         <h4>Hello, I'm</h4>
         <h1>Akpobasa Victor</h1>
@@ -20,11 +31,22 @@ const Home = () => {
         </a>
 
         {/* ME */}
-        <div className="me">
+        <motion.div
+          className="me"
+          initial="hidden"
+          whileInView="visible"
+          animate="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          variants={{
+            hidden: { opacity: 0, y: 50, scale: 0.95 },
+            visible: { opacity: 1, y: 0,scale: 1 },
+          }}
+        >
           <img src={ME} alt="" />
-        </div>
+        </motion.div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

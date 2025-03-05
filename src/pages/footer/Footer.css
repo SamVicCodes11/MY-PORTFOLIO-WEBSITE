@@ -60,6 +60,7 @@ footer a {
   background: transparent;
   border-color: var(--color-bg);
   color: var(--color-bg);
+  transform: translateY(-0.5rem);
 }
 
 .footer_copyright {

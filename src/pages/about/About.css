@@ -53,6 +53,7 @@
   background: transparent;
   border-color: var(--color-bg-variant);
   cursor: default;
+  transform: translateY(-0.5rem);
 }
 
 .about_content article h4 {
@@ -63,6 +64,8 @@
   color: var(--color-light);
   margin: 2rem 0 2.6rem;
 }
+
+
 
 @media screen and (max-width: 1100px) {
   .about_container {
