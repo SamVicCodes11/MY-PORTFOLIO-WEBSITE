@@ -1,87 +1,78 @@
-:root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
-
-  --container-width-lg: 75%;
-  --container-width-md: 86%;
-  --container-width-sm: 90%;
-  --transition: all 400ms ease;
-}
-
+/* ----- GENERAL STYLES ----- */
 .services_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  padding: 2rem 0;
 }
 
+/* ----- SERVICE CARDS ----- */
 .services_container article {
-  background: var(--color-bg-variant);
-  border-radius: 0 0 2rem 2rem;
+  background: rgba(44, 44, 108, 0.7);
+  border-radius: 1.5rem;
   border: 1px solid transparent;
-  height: fit-content;
-  transition: var(--transition);
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ✅ IMPROVED HOVER EFFECT */
 .services_container article:hover {
-  border-color: var(--color-primary-variant);
-  background: transparent;
-  cursor: default;
+  transform: scale(1.05);
+  border-color: #4db5ff;
+  background: rgba(44, 44, 108, 0.9);
+  box-shadow: 0px 8px 20px rgba(77, 181, 255, 0.4);
 }
 
+/* ----- HEADINGS ----- */
 .services_head {
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
-  border-radius: 0 0 2rem 2rem;
-  background: var(--color-primary);
-  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
-  color: var(--color-bg);
+  border-radius: 1rem 1rem 0 0;
+  background: #4db5ff;
+  color: #1f1f38;
   font-size: 1rem;
+  font-weight: bold;
 }
 
+/* ----- SERVICE LIST ----- */
 .service_list {
-  padding: 1.6rem;
+  padding: 1.2rem;
 }
 
+/* ✅ Slide-in effect on hover */
 .service_list li {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.8rem;
   margin-bottom: 0.8rem;
+  transition: transform 0.3s ease-in-out;
 }
 
-.service_list li p {
-  font-size: 0.9rem;
-  line-height: 1.7;
+.service_list li:hover {
+  transform: translateX(10px);
 }
 
+/* ✅ ICON HOVER EFFECT */
 .service_list_icon {
-  font-size: 1.5rem;
-  color: var(--color-primary);
+  font-size: 1.3rem;
+  color: #4db5ff;
+  transition: transform 0.3s ease-in-out;
 }
 
+.service_list li:hover .service_list_icon {
+  transform: rotate(360deg) scale(1.2);
+}
 
-
-
+/* RESPONSIVENESS */
 @media screen and (max-width: 1100px) {
   .services_container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .services_container article {
-    height: auto;
   }
 }
 
-
 @media screen and (max-width: 700px) {
   .services_container {
-    grid-template-columns:  1fr;
-    gap: 1.8rem;
-    width: 80%;
-    margin-inline: auto;
+    grid-template-columns: 1fr;
   }
 }

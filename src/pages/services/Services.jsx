@@ -1,5 +1,20 @@
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
+import { motion } from "framer-motion"; // Import Framer Motion
 import "./Services.css";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.1, duration: 0.4 },
+  }),
+};
 
 const Services = () => {
   return (
@@ -7,107 +22,74 @@ const Services = () => {
       <h5>What I Offer</h5>
       <h2>Services</h2>
 
-      <div className="container services_container">
+      <motion.div
+        className="container services_container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {/* FRONTEND */}
-
-        <article>
+        <motion.article variants={cardVariants}>
           <div className="services_head">
             <h3>Frontend Development</h3>
           </div>
-
           <ul className="service_list">
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Building responsive and visually appealing user interfaces.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Optimizing web applications for speed and performance.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Ensuring seamless cross-browser and mobile compatibility.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Implementing smooth animations and interactive elements.</p>
-            </li>
+            {[
+              "Building responsive and visually appealing user interfaces.",
+              "Optimizing web applications for speed and performance.",
+              "Ensuring seamless cross-browser and mobile compatibility.",
+              "Implementing smooth animations and interactive elements.",
+            ].map((text, i) => (
+              <motion.li key={i} custom={i} variants={listItemVariants}>
+                <IoShieldCheckmarkSharp className="service_list_icon" />
+                <p>{text}</p>
+              </motion.li>
+            ))}
           </ul>
-        </article>
+        </motion.article>
 
         {/* FULLSTACK */}
-
-        <article>
+        <motion.article variants={cardVariants}>
           <div className="services_head">
             <h3>Fullstack Development</h3>
           </div>
-
           <ul className="service_list">
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Developing scalable, end-to-end web applications.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Integrating frontend and backend for seamless data flow.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Building robust APIs for secure data exchange.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Ensuring high performance and security across applications.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Managing databases and server-side logic efficiently.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Deploying and maintaining web applications in the cloud.</p>
-            </li>
+            {[
+              "Developing scalable, end-to-end web applications.",
+              "Integrating frontend and backend for seamless data flow.",
+              "Building robust APIs for secure data exchange.",
+              "Ensuring high performance and security across applications.",
+              "Managing databases and server-side logic efficiently.",
+              "Deploying and maintaining web applications in the cloud.",
+            ].map((text, i) => (
+              <motion.li key={i} custom={i} variants={listItemVariants}>
+                <IoShieldCheckmarkSharp className="service_list_icon" />
+                <p>{text}</p>
+              </motion.li>
+            ))}
           </ul>
-        </article>
+        </motion.article>
 
         {/* BACKEND */}
-
-        <article>
+        <motion.article variants={cardVariants}>
           <div className="services_head">
             <h3>Backend Development</h3>
           </div>
-
           <ul className="service_list">
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Designing and implementing scalable backend architectures.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Developing and securing RESTful APIs and databases.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Ensuring data integrity and authentication mechanisms.</p>
-            </li>
-
-            <li>
-              <IoShieldCheckmarkSharp className="service_list_icon" />
-              <p>Optimizing server performance and database queries.</p>
-            </li>
+            {[
+              "Designing and implementing scalable backend architectures.",
+              "Developing and securing RESTful APIs and databases.",
+              "Ensuring data integrity and authentication mechanisms.",
+              "Optimizing server performance and database queries.",
+            ].map((text, i) => (
+              <motion.li key={i} custom={i} variants={listItemVariants}>
+                <IoShieldCheckmarkSharp className="service_list_icon" />
+                <p>{text}</p>
+              </motion.li>
+            ))}
           </ul>
-        </article>
-      </div>
+        </motion.article>
+      </motion.div>
     </section>
   );
 };

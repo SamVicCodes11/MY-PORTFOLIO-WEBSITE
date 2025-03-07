@@ -1,174 +1,76 @@
-import { IoShieldCheckmarkSharp } from "react-icons/io5";
-import "./Experience.css";
 import { FaCheck } from "react-icons/fa";
+import { motion } from "framer-motion";
+import "./Experience.css";
 
 const Experience = () => {
-  const frontendExperience = [
-    {
-      icon: <FaCheck />,
-      skill: "HTML",
-      experience: "Experienced",
-    },
+  const skills = {
+    frontend: [
+      { skill: "HTML", level: "Experienced" },
+      { skill: "CSS", level: "Experienced" },
+      { skill: "JavaScript", level: "Experienced" },
+      { skill: "TypeScript", level: "Intermediate" },
+      { skill: "React.js", level: "Experienced" },
+      { skill: "Next.js", level: "Experienced" },
+      { skill: "Tailwind CSS", level: "Experienced" },
+      { skill: "Figma", level: "Experienced" },
+      { skill: "Git & GitHub", level: "Experienced" },
+      { skill: "Context API", level: "Experienced" },
+      { skill: "Axios", level: "Experienced" },
+      { skill: "Redux", level: "Intermediate" },
+    ],
+    backend: [
+      { skill: "Node.js", level: "Experienced" },
+      { skill: "Express.js", level: "Experienced" },
+      { skill: "RESTful APIs", level: "Experienced" },
+      { skill: "MongoDB", level: "Experienced" },
+      { skill: "Firebase", level: "Experienced" },
+      { skill: "Python", level: "Basic" },
+      { skill: "Prisma", level: "Intermediate" },
+      { skill: "Postman", level: "Proficient" },
+      { skill: "NPM", level: "Experienced" },
+    ],
+  };
 
-    {
-      icon: <FaCheck />,
-      skill: "CSS",
-      experience: "Experienced",
-    },
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.2 } },
+  };
 
-    {
-      icon: <FaCheck />,
-      skill: "JavaScript",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "TypeScript",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "React.js",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "Next.js",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "Tailwind CSS",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "Figma",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "Git & GitHub",
-      experience: "Experienced",
-    },
-
-    {
-      icon: <FaCheck />,
-      skill: "Context API",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Axios",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Redux",
-      experience: "Experienced",
-    },
-  ];
-
-  // BACKEND
-  const backendExperience = [
-    {
-      icon: <FaCheck />,
-      skill: "Node.js",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Express.js",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Next.js",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "RESTful APIs",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "MongoDB",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Firebase",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Python",
-      experience: "Basic",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Prisma",
-      experience: "Intermediate",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "Postman",
-      experience: "Experienced",
-    },
-    {
-      icon: <FaCheck />,
-      skill: "NPM",
-      experience: "Experienced",
-    },
-  ];
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200 } },
+  };
 
   return (
     <section id="experience">
-      <h5>What Skill I Have</h5>
-      <h2>My Experience</h2>
+      <motion.h5 initial="hidden" animate="visible" variants={containerVariants}>
+        What Skills I Have
+      </motion.h5>
+      <motion.h2 initial="hidden" animate="visible" variants={containerVariants}>
+        My Experience
+      </motion.h2>
 
-      <div className="experience_container container">
-        {/* FRONTEND EXPERIENCE */}
-        <div className="experience_frontend">
-          <h3>Frontend Development</h3>
-
-          <div className="experience_content">
-            {frontendExperience.map(({ icon, skill, experience }, index) => (
-              <article key={index}>
-                <i className="experience_icon">{icon}</i>
-                <div>
-                  <h4>{skill}</h4>
-                  <small className="text_light">{experience}</small>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* BACKEND EXPERIENCE */}
-        <div className="experience_backend">
-          <h3>Backend Development</h3>
-
-          <div className="experience_content">
-            {backendExperience.map(({ icon, skill, experience }, index) => (
-              <article key={index}>
-                <i className="experience_icon">{icon}</i>
-                <div>
-                  <h4>{skill}</h4>
-                  <small className="text_light">{experience}</small>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
+      <motion.div className="experience_container container" variants={containerVariants} initial="hidden" animate="visible">
+        {Object.entries(skills).map(([category, skillSet]) => (
+          <motion.div key={category} className={`experience_${category}`} variants={containerVariants}>
+            <h3>{category === "frontend" ? "Frontend Development" : "Backend Development"}</h3>
+            <p>{category === "frontend" ? "Building scalable UI components and interactive experiences." : "Developing secure and scalable APIs."}</p>
+            <motion.div className="experience_content" variants={containerVariants}>
+              {skillSet.map(({ skill, level }, index) => (
+                <motion.article key={index} className="experience_item" variants={itemVariants}>
+                  <span className="experience_icon" aria-label="Skill Verified">
+                    <FaCheck />
+                  </span>
+                  <div>
+                    <h4>{skill}</h4>
+                    <small className="text_light">{level}</small>
+                  </div>
+                </motion.article>
+              ))}
+            </motion.div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };

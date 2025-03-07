@@ -92,8 +92,6 @@ header {
   .me {
     width: 20rem;
     left: calc(50% - 10rem);
-    /* max-width: 80%; */
-    /* margin-inline: auto; */
-    /* max-height: 100vh; */
+  
   }
 }
