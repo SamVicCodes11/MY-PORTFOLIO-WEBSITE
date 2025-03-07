@@ -17,7 +17,7 @@ const Nav = () => {
       scrollTimeout = setTimeout(() => {
         setIsScrolling(false);
         setFirstMount(false); // Disable first mount animation after initial hide
-      }, 2500); // Hide after 2 seconds
+      }, 2500); // Hide after 2.5 seconds
     };
 
     window.addEventListener("scroll", handleScroll);
