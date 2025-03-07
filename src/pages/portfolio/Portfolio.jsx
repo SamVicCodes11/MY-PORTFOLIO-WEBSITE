@@ -12,6 +12,8 @@ import PROJECT6 from "../../images/project6.png";
 import PROJECT7 from "../../images/project7.jpg";
 import PROJECT8 from "../../images/project8.png";
 
+import PROJECT9 from "../../images/project9.png";
+
 const Portfolio = () => {
   const portfolioProjects = [
     {
@@ -46,7 +48,7 @@ const Portfolio = () => {
     {
       id: 5,
       image: PROJECT5,
-      title: "E-Commerce Shopping Platform",
+      title: "E-commerce Fashion Store",
       github: "https://github.com/SamVicCodes11/E-CORMMERCE-SHOPPING-PLATFORM",
       demo: "https://e-cormmerce-shopping-platform.vercel.app/",
     },
@@ -70,8 +72,16 @@ const Portfolio = () => {
       id: 8,
       image: PROJECT8,
       title: "Banking Management Platform",
-      github: "https://github.com/SamVicCodes11/Bankist-Website",
-      demo: "https://bankist-website-psi.vercel.app/",
+      github: "https://github.com/SamVicCodes11/BANKING-MANAGEMENT-APP",
+      demo: "https://banking-management-app-azure.vercel.app/",
+    },
+    {
+      id: 9,
+      image: PROJECT9,
+      title: "Electronics E-commerce Website",
+      github:
+        "https://github.com/SamVicCodes11/E-CORMMERCE-STORE-FOR-ELECTRONICS",
+      demo: "https://e-cormmerce-store-for-electronics.vercel.app/",
     },
   ];
 

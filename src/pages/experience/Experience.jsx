@@ -63,6 +63,16 @@ const Experience = () => {
       skill: "Context API",
       experience: "Experienced",
     },
+    {
+      icon: <FaCheck />,
+      skill: "Axios",
+      experience: "Experienced",
+    },
+    {
+      icon: <FaCheck />,
+      skill: "Redux",
+      experience: "Experienced",
+    },
   ];
 
   // BACKEND
@@ -101,6 +111,21 @@ const Experience = () => {
       icon: <FaCheck />,
       skill: "Python",
       experience: "Basic",
+    },
+    {
+      icon: <FaCheck />,
+      skill: "Prisma",
+      experience: "Intermediate",
+    },
+    {
+      icon: <FaCheck />,
+      skill: "Postman",
+      experience: "Experienced",
+    },
+    {
+      icon: <FaCheck />,
+      skill: "NPM",
+      experience: "Experienced",
     },
   ];
 

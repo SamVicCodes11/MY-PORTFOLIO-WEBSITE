@@ -8,47 +8,21 @@ import { HiUsers } from "react-icons/hi";
 
 import CV from "../../cv/resume.pdf";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const About = () => {
-
-  const container = {
-    hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-
   return (
     <section id="about">
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 
-      <motion.div 
-      className="container about_container"
-      initial="hidden"
-      whileInView="visible"
-      animate="visible"
-      // viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5 }}
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      >
+      <div className="container about_container">
         <div className="about_me_img">
           <img src={ME} alt="Akpobasa Victor Samuel" />
         </div>
 
         <div>
-          <motion.div 
-          className="about_content"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={container}
-          >
+          <div className="about_content">
             <article>
               <FaAward className="about_icon" />
 
@@ -69,7 +43,7 @@ const About = () => {
               <h4>Projects</h4>
               <small className="text_light"> 30+ Completed</small>
             </article>
-          </motion.div>
+          </div>
 
           <p>
             I’m a Front-End Engineer dedicated to crafting intuitive,
@@ -79,16 +53,13 @@ const About = () => {
             mindset, I turn ideas into polished, interactive digital solutions.
           </p>
 
-          {/* <a href="#contact" className="btn btn_primary">
-            Let's Connect
-          </a> */}
+          
 
           <a href={CV} download className="btn btn_primary">
             Download CV
-            
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
