@@ -8,14 +8,14 @@ import Portfolio from "./pages/portfolio/Portfolio";
 import Services from "./pages/services/Services";
 import Testimonials from "./pages/testimonials/Testimonials";
 
-// import { motion } from "framer-motion";
 
 function App() {
+
   return (
     <div>
       <Home />
 
-        <Nav />
+      <Nav />
       <About />
       <Experience />
       <Services />

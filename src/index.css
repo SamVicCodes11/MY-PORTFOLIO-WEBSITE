@@ -112,7 +112,7 @@ a:hover {
   border-color: transparent;
   background: var(--color-white);
   color: var(--color-bg);
-  transform: translateY(-0.5rem);
+  transform: scale(1.04);
 }
 
 .btn_primary {
@@ -122,7 +122,6 @@ a:hover {
 
 /* NAVBAR */
 
-
 nav div {
   background: rgba(0, 0, 0, 0.3);
   padding: 0.9rem 1.7rem;
@@ -131,8 +130,8 @@ nav div {
   position: fixed;
   left: 50%;
   bottom: 1rem;
-  z-index: 2;
-  transform: translate(-50%);
+  z-index: 1000;
+  transform: translateX(-50%);
 
   display: flex;
   justify-content: center;
@@ -142,26 +141,48 @@ nav div {
 }
 
 nav a {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--color-light);
-  /* color: red; */
-  padding: 0.2rem 0.4rem;
   padding: 0.5rem;
   border-radius: 50%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition: background 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 nav a.active {
   background: var(--color-primary);
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px rgba(77, 181, 255, 0.7);
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Mobile Optimization */
+
+
+@media (max-width: 1024px) {
+  nav a:hover {
+    background: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  nav div {
+    padding: 0.7rem 1.2rem;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
 }
 
 /* MEDIA QUERIES */

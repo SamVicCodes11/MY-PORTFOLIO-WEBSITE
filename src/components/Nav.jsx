@@ -5,19 +5,42 @@ import { motion } from "framer-motion";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
+  const [isScrolling, setIsScrolling] = useState(true);
+  const [firstMount, setFirstMount] = useState(true);
+  let scrollTimeout;
 
   useEffect(() => {
-    // Observe sections and update activeNav
-    const sections = document.querySelectorAll("section");
+    const handleScroll = () => {
+      setIsScrolling(true);
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        setIsScrolling(false);
+        setFirstMount(false); // Disable first mount animation after initial hide
+      }, 2500); // Hide after 2 seconds
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveNav(`#${entry.target.id}`);
+            const newHash = `#${entry.target.id}`;
+            setActiveNav(newHash);
+            window.history.pushState(null, null, newHash); // Update URL
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.4 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -26,10 +49,10 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    // Detect when user scrolls to the top
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setActiveNav("#");
+        window.history.pushState(null, null, "#");
       }
     };
 
@@ -40,9 +63,12 @@ const Nav = () => {
 
   return (
     <motion.nav
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }} // 0.8s delay
+      initial={firstMount ? { opacity: 0, y: 50 } : false} // Animate only on first mount
+      animate={{ opacity: isScrolling ? 1 : 0, y: isScrolling ? 0 : 50 }}
+      transition={
+        firstMount ? { duration: 0.5, ease: "easeOut" } : { duration: 0 }
+      }
+      style={{ pointerEvents: isScrolling ? "auto" : "none" }}
     >
       <div>
         <a

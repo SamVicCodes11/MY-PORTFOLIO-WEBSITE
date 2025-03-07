@@ -12,6 +12,10 @@
   --transition: all 400ms ease;
 }
 
+.testimonial_container {
+  padding-bottom: 4rem;
+}
+
 .testimonial_container article {
   text-align: center;
   background: var(--color-bg-variant);
@@ -35,7 +39,7 @@
   border: 0.4rem solid var(--color-primary-variant);
 }
 
-.clent_review {
+.client_review {
   color: var(--color-light);
   font-weight: 300;
   width: 80%;
@@ -43,6 +47,7 @@
   margin-inline: auto;
   font-size: 0.85rem;
 }
+
 
 @media screen and (max-width: 900px) {
   .testimonial_container article {
@@ -55,7 +60,7 @@
     width: 90%;
   }
 
-  .clent_review {
+  .client_review {
     width: 95%;
   }
 }

@@ -3,7 +3,6 @@ import { IoLibrary } from "react-icons/io5";
 import { HiUsers } from "react-icons/hi";
 import { motion } from "framer-motion";
 import ME from "../../images/MY PIC 2.jpg";
-// import ME from "../../images/sammy.JPG";
 import CV from "../../cv/resume.pdf";
 import "./About.css";
 

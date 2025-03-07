@@ -33,34 +33,77 @@ const Experience = () => {
 
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.2 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, staggerChildren: 0.2 },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", stiffness: 200 },
+    },
   };
 
   return (
     <section id="experience">
-      <motion.h5 initial="hidden" animate="visible" variants={containerVariants}>
+      <motion.h5
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         What Skills I Have
       </motion.h5>
-      <motion.h2 initial="hidden" animate="visible" variants={containerVariants}>
+      <motion.h2
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         My Experience
       </motion.h2>
 
-      <motion.div className="experience_container container" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div
+        className="experience_container container"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {Object.entries(skills).map(([category, skillSet]) => (
-          <motion.div key={category} className={`experience_${category}`} variants={containerVariants}>
-            <h3>{category === "frontend" ? "Frontend Development" : "Backend Development"}</h3>
-            <p>{category === "frontend" ? "Building scalable UI components and interactive experiences." : "Developing secure and scalable APIs."}</p>
-            <motion.div className="experience_content" variants={containerVariants}>
+          <motion.div
+            key={category}
+            className={`experience_${category}`}
+            variants={containerVariants}
+          >
+            <h3>
+              {category === "frontend"
+                ? "Frontend Development"
+                : "Backend Development"}
+            </h3>
+
+            <p>
+              {category === "frontend"
+                ? "Building scalable UI components and interactive experiences."
+                : "Developing secure and scalable APIs."}
+            </p>
+
+            <motion.div
+              className="experience_content"
+              variants={containerVariants}
+            >
               {skillSet.map(({ skill, level }, index) => (
-                <motion.article key={index} className="experience_item" variants={itemVariants}>
+                <motion.article
+                  key={index}
+                  className="experience_item"
+                  variants={itemVariants}
+                >
                   <span className="experience_icon" aria-label="Skill Verified">
                     <FaCheck />
                   </span>
+
                   <div>
                     <h4>{skill}</h4>
                     <small className="text_light">{level}</small>

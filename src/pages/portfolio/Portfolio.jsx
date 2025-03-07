@@ -75,26 +75,24 @@ const portfolioProjects = [
     id: 9,
     image: PROJECT9,
     title: "Electronics E-Commerce Website",
-    github: "https://github.com/SamVicCodes11/E-COMMERCE-STORE-FOR-ELECTRONICS",
-    demo: "https://e-commerce-store-for-electronics.vercel.app/",
+    github: "https://github.com/SamVicCodes11/E-CORMMERCE-STORE-FOR-ELECTRONICS",
+    demo: "https://e-cormmerce-store-for-electronics.vercel.app/",
   },
 ];
+
+// Animation variants for cleaner structure
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <motion.h5
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <motion.h5 initial="hidden" animate="visible" variants={fadeInUp}>
         My Recent Work
       </motion.h5>
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      <motion.h2 initial="hidden" animate="visible" variants={fadeInUp}>
         Portfolio
       </motion.h2>
 
@@ -105,45 +103,43 @@ const Portfolio = () => {
         viewport={{ once: true, amount: 0.2 }}
         variants={{
           hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.3 } },
+          visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
         }}
       >
         {portfolioProjects.map((project) => (
           <motion.article
             key={project.id}
             className="portfolio_card"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+            }}
+            variants={fadeInUp}
           >
             <div className="portfolio_image">
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt={project.title} loading="lazy" />
             </div>
 
             <h3>{project.title}</h3>
 
-            <motion.div
-              className="portfolio_link"
-              // initial={{ opacity: 0 }}
-              // whileHover={{ opacity: 1 }}
-              // transition={{ duration: 0.3 }}
-            >
+            <motion.div className="portfolio_link">
               <motion.a
                 href={project.github}
                 className="btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                // whileHover={{ scale: 1.1 }}
+                aria-label={`GitHub repository for ${project.title}`}
+                whileHover={{ scale: 1.1 }}
               >
-                Github
+                GitHub
               </motion.a>
               <motion.a
                 href={project.demo}
                 className="btn btn_primary"
                 target="_blank"
                 rel="noopener noreferrer"
-                // whileHover={{ scale: 1.1 }}
+                aria-label={`Live demo of ${project.title}`}
+                whileHover={{ scale: 1.1 }}
               >
                 Live Demo
               </motion.a>
