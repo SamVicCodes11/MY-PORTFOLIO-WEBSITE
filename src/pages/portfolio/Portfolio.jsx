@@ -47,8 +47,8 @@ const portfolioProjects = [
     id: 5,
     image: PROJECT5,
     title: "E-Commerce Fashion Store",
-    github: "https://github.com/SamVicCodes11/E-COMMERCE-SHOPPING-PLATFORM",
-    demo: "https://e-commerce-shopping-platform.vercel.app/",
+    github: "https://github.com/SamVicCodes11/E-CORMMERCE-SHOPPING-PLATFORM",
+    demo: "https://e-cormmerce-shopping-platform.vercel.app/",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const portfolioProjects = [
     id: 7,
     image: PROJECT7,
     title: "Gym and Membership Management System",
-    github: "https://github.com/SamVicCodes11/GYM_WEBSITE",
+    github: "https://github.com/SamVicCodes11/GYM__WEBSITE",
     demo: "https://samvicgymwebsite.vercel.app/",
   },
   {
@@ -75,7 +75,8 @@ const portfolioProjects = [
     id: 9,
     image: PROJECT9,
     title: "Electronics E-Commerce Website",
-    github: "https://github.com/SamVicCodes11/E-CORMMERCE-STORE-FOR-ELECTRONICS",
+    github:
+      "https://github.com/SamVicCodes11/E-CORMMERCE-STORE-FOR-ELECTRONICS",
     demo: "https://e-cormmerce-store-for-electronics.vercel.app/",
   },
 ];

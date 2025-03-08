@@ -36,11 +36,11 @@ const Nav = () => {
           if (entry.isIntersecting) {
             const newHash = `#${entry.target.id}`;
             setActiveNav(newHash);
-            window.history.pushState(null, null, newHash); // Update URL
+            window.history.pushState(null, null, newHash);
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 } // Reduce threshold for better detection
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -86,9 +86,9 @@ const Nav = () => {
           <FaUser />
         </a>
         <a
-          href="#experience"
-          className={activeNav === "#experience" ? "active" : ""}
-          onClick={() => setActiveNav("#experience")}
+          href="#services"
+          className={activeNav === "#services" ? "active" : ""}
+          onClick={() => setActiveNav("#services")}
         >
           <FaBook />
         </a>

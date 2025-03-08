@@ -167,7 +167,7 @@ nav a:hover {
 
 @media (max-width: 1024px) {
   nav a:hover {
-    background: var(--color-primary);
+    background: transparent;
   }
 }
 
