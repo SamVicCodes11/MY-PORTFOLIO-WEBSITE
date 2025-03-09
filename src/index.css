@@ -35,9 +35,9 @@ body {
   overflow-x: hidden;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 
 html {
   scroll-behavior: smooth;
